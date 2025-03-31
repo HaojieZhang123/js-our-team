@@ -39,16 +39,32 @@ const teamMembers = [
 
 // function to create cards
 const createMemberCard = (member) => {
-  const card = `<div class="member-card d-flex">
+  const card = `<div class="col-12 col-md-6 col-lg-4">
+                  <div class="member-card d-flex">
                     <div class="member-image">
-                        <img src=".${member.img}" alt="">
+                        <img src="./${member.img}" alt="">
                     </div>
                     <div class="member-info">
-                        <div>${member.name}</div>
+                        <div class="name">${member.name}</div>
                         <div>${member.role}</div>
-                        <a href="#">${member.email}</a>
+                        <a href="#" class="email">${member.email}</a>
                     </div>
+                  </div>
                 </div>`
 
   return card
 }
+
+// function to display all team's cards
+const renderTeam = (teamMembers) => {
+  let cards = '';
+
+  for (let i = 0; i < teamMembers.length; i++) {
+    cards += createMemberCard(teamMembers[i]);
+  }
+
+  document.getElementById('cards-container').innerHTML = cards;
+}
+
+// call function to display cards
+renderTeam(teamMembers);
