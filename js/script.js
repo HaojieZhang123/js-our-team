@@ -37,6 +37,14 @@ const teamMembers = [
   }
 ];
 
+// variables for form elements from DOM
+const form = document.getElementById('member-form');
+const nameInput = document.getElementById('name');
+const roleInput = document.getElementById('role');
+const emailInput = document.getElementById('email');
+const imgInput = document.getElementById('img');
+const button = document.querySelector('.btn');
+
 // function to create cards
 const createMemberCard = (member) => {
   const card = `<div class="col-12 col-md-6 col-lg-4">
@@ -68,3 +76,22 @@ const renderTeam = (teamMembers) => {
 
 // call function to display cards
 renderTeam(teamMembers);
+
+// function to add a new team member
+const addMember = () => {
+  const newMember = {
+    name: nameInput.value,
+    role: roleInput.value,
+    email: emailInput.value,
+    img: imgInput.value
+  }
+  teamMembers.push(newMember);
+  renderTeam(teamMembers);
+  form.reset();
+}
+
+// add event listener to form
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  addMember();
+})
