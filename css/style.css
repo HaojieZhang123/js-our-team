@@ -41,3 +41,7 @@ h1{
     text-decoration: none;
     color: #5EC5EC;
 }
+form{
+    width: 50%;
+    margin: 0 auto;
+}

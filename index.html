@@ -13,10 +13,10 @@
 <body>
 
     <!-- title section -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12 text-center py-5">
-                <h1 class="pb-5">Our Team</h1>
+                <h1 class="pb-5">Meet our Team</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque incidunt exercitationem nobis consectetur saepe, labore hic dicta natus sit amet earum eveniet possimus sunt explicabo iusto alias molestiae commodi quas?</p>
             </div>
         </div>
@@ -41,6 +41,41 @@
         </div>
     </div>
     
+    <!-- form section -->
+     <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <h3 class="text-center">Add a new member</h3>
+
+                <form action="#" id="member-form" >
+
+                    <div class="my-2">
+                        <label class="label-control" for="name">Name</label>
+                        <input class="form-control" type="text" name="name" id="name">
+                    </div>
+
+                    <div class="my-2">
+                        <label class="label-control" for="role">Role</label>
+                        <input class="form-control" type="text" name="role" id="role">
+                    </div>
+
+                    <div class="my-2">
+                        <label class="label-control" for="email">Email</label>
+                        <input class="form-control" type="email" name="email" id="email">
+                    </div>
+
+                    <div class="my-2">
+                        <label class="label-control" for="img">Image</label>
+                        <input class="form-control" type="text" name="img" id="img">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary my-3">Add Member</button>
+
+                </form>
+            </div>
+        </div>
+     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
