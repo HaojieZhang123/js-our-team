@@ -36,3 +36,19 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+// function to create cards
+const createMemberCard = (member) => {
+  const card = `<div class="member-card d-flex">
+                    <div class="member-image">
+                        <img src=".${member.img}" alt="">
+                    </div>
+                    <div class="member-info">
+                        <div>${member.name}</div>
+                        <div>${member.role}</div>
+                        <a href="#">${member.email}</a>
+                    </div>
+                </div>`
+
+  return card
+}
