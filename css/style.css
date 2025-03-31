@@ -23,14 +23,14 @@ h1{
 
 }
 .member-image{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 .member-image img{
     height: 100%;
 }
 .member-info{
-    padding: 20px;
+    padding: 10px 20px;
 }
 .name{
     font-size: 20px;
